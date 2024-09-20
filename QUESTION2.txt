@@ -1,0 +1,85 @@
+Q2 => Explain the role of the following key properties in the Fexbox layout model.
+1. justify-content
+2. align-items
+3. gap
+4. flex-direction
+5. flex-wrap
+
+
+Ans = >
+
+1. justify-content => 
+
+Purpose: Controls how flex items are aligned along the main axis (horizontal by default, unless changed by flex-direction).
+
+Effect: It determines how the extra space between flex items (if any) is distributed.
+
+Common Values:
+
+flex-start: Items are aligned at the start of the main axis (default).
+flex-end: Items are aligned at the end of the main axis.
+center: Items are centered along the main axis.
+space-between: Items are evenly distributed, with the first item at the start and the last at the end.
+space-around: Items are evenly distributed, with equal space around them.
+space-evenly: Items are evenly distributed with equal space between and around them.
+
+Use Case: If you have a row of buttons and want them to be evenly spaced, you would use justify-content: space-between or justify-content: space-around.
+
+2. align-items => 
+
+Purpose: Controls how flex items are aligned along the cross axis (vertical by default, unless changed by flex-direction).
+
+Effect: It determines how flex items are aligned relative to the flex container’s cross axis.
+
+Common Values:
+
+flex-start: Aligns items at the start of the cross axis.
+flex-end: Aligns items at the end of the cross axis.
+center: Aligns items at the center of the cross axis.
+baseline: Aligns items such that their baselines align (useful for text).
+stretch: Stretches items to fill the flex container’s cross axis (default behavior).
+
+Use Case: If you have a flex container with items of different heights and want them all aligned at the top, use align-items: flex-start. To vertically center them, use align-items: center.
+
+3. gap => 
+
+Purpose: Sets the spacing between flex items along both the main axis and cross axis.
+
+Effect: Adds consistent spacing between items without needing to use margin or padding manually on each item.
+
+Common Values:
+
+gap: 10px: Sets a gap of 10px between each flex item.
+row-gap: Sets the gap specifically between rows.
+column-gap: Sets the gap specifically between columns.
+
+Use Case: If you want a consistent space between items in a flex layout, use gap: 20px to separate them. It's simpler than adding individual margins to each flex item.
+
+4. flex-direction => 
+
+Purpose: Specifies the direction of the flex items within the flex container (i.e., along the main axis).
+
+Effect: Controls whether the items are laid out in a row or column, and in what order (normal or reversed).
+
+Common Values:
+
+row: Items are laid out in a horizontal row (default).
+row-reverse: Items are laid out in a horizontal row, but in reverse order.
+column: Items are laid out in a vertical column.
+column-reverse: Items are laid out in a vertical column, but in reverse order.
+
+Use Case: To stack items vertically instead of horizontally, you can set flex-direction: column. For example, in a mobile layout, you may want to stack menu items vertically.
+
+5. flex-wrap =>
+
+Purpose: Specifies whether flex items are forced into a single line or can wrap onto multiple lines if there’s not enough space in the flex container.
+
+Effect: Controls whether items stay in a single row or column or break into multiple lines.
+
+Common Values:
+
+nowrap: All flex items are kept on a single line (default).
+wrap: Flex items will wrap to the next line if there’s not enough space in the container.
+wrap-reverse: Flex items will wrap to the next line, but in reverse order.
+
+Use Case: If you have a grid of cards and want them to wrap onto the next row when the screen gets smaller, you would use flex-wrap: wrap.
